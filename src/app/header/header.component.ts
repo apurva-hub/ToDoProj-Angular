@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDo } from 'src/Model/ToDo';
+import { ToDoDataService } from '../to-do-data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,19 @@ import { ToDo } from 'src/Model/ToDo';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'ToDo List';
+  taskName: string = '';
+  taskDescription: string = '';
 
-  constructor() {}
+  constructor(private _toDoDataService: ToDoDataService) {}
 
   ngOnInit(): void {}
+  addTask = () => {
+    this._toDoDataService.taskData?.push({
+      TaskName: this.taskName,
+      TaskDescription: this.taskDescription,
+    });
+    this.taskName = '';
+    this.taskDescription = '';
+    alert(this._toDoDataService.a());
+  };
 }

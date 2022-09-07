@@ -1,21 +1,3 @@
-<div class="form-page">
-  <form (submit)="addTask()">
-    <input
-      [(ngModel)]="taskName"
-      type="text"
-      name="taskName"
-      placeholder="Task Name"
-    /><br /><br />
-    <input
-      [(ngModel)]="taskDescription"
-      type="text"
-      name="taskDescription"
-      placeholder="Task Description"
-    /><br /><br />
-    <input type="submit" value="Add Task" /><br /><br />
-  </form>
-</div>
-
 <div class="taskDisplay" *ngFor="let task of toDo; let i = index">
   <h2>{{ task.TaskName }}</h2>
   <p>{{ task.TaskDescription }}</p>

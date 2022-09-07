@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDo } from 'src/Model/ToDo';
+import { ToDoDataService } from '../to-do-data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,35 +9,13 @@ import { ToDo } from 'src/Model/ToDo';
 })
 export class HomeComponent implements OnInit {
   toDo?: ToDo[];
-  taskName: string = '';
-  taskDescription: string = '';
-  constructor() {
-    this.toDo = [
-      {
-        TaskName: 'Workout',
-        TaskDescription: 'Early morning at 6',
-      },
-      {
-        TaskName: 'Meeting',
-        TaskDescription: 'Managers connect',
-      },
-      {
-        TaskName: 'Breakfast',
-        TaskDescription: 'Eattttt',
-      },
-    ];
+  constructor(private _toDoDataService: ToDoDataService) {}
+
+  ngOnInit(): void {
+    //display the array here
+    this.toDo = this._toDoDataService.getAllTask();
   }
 
-  ngOnInit(): void {}
-  addTask = () => {
-    this.toDo?.push({
-      TaskName: this.taskName,
-      TaskDescription: this.taskDescription,
-    });
-    this.taskName = '';
-    this.taskDescription = '';
-    alert('Added successfully');
-  };
   removeTask = (id: number) => {
     this.toDo?.splice(id, 1);
   };

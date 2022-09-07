@@ -2,3 +2,21 @@
   <h1>{{ title }}</h1>
   <app-button text="Add +"></app-button>
 </header>
+
+<div class="form-page">
+  <form (submit)="addTask()">
+    <input
+      [(ngModel)]="taskName"
+      type="text"
+      name="taskName"
+      placeholder="Task Name"
+    /><br /><br />
+    <input
+      [(ngModel)]="taskDescription"
+      type="text"
+      name="taskDescription"
+      placeholder="Task Description"
+    /><br /><br />
+    <input type="submit" value="Add Task" /><br /><br />
+  </form>
+</div>

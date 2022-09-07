@@ -7,11 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { ToDoDataService } from './to-do-data.service';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ButtonComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [ToDoDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
