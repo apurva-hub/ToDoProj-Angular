@@ -1,5 +1,15 @@
-<div class="taskDisplay" *ngFor="let task of toDo; let i = index">
-  <h2>{{ task.TaskName }}</h2>
-  <p>{{ task.TaskDescription }}</p>
-  <button (click)="removeTask(i)">Remove</button>
+<div class="task">
+  <div class="taskDisplay" *ngFor="let task of toDoData; let i = index">
+    <div class="taskName-layout">
+      <h2 class="taskName">
+        {{ task.projectTitle }}
+      </h2>
+      <button class="removeButton" (click)="removeTask(task.projectId)">
+        <img
+          class="remove"
+          src="https://www.svgrepo.com/show/236615/remove-delete.svg"
+        />
+      </button>
+    </div>
+  </div>
 </div>

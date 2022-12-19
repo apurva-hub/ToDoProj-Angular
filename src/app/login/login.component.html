@@ -1,0 +1,48 @@
+<div class="form">
+  <form class="form-page">
+    <h4 class="form-title">Login</h4>
+    <input
+      class="form-input"
+      [(ngModel)]="Email"
+      name="Email"
+      type="email"
+      value="Email"
+      placeholder="Email"
+    />
+    <input
+      class="form-input"
+      [(ngModel)]="Password"
+      name="Password"
+      type="password"
+      placeholder="Password"
+    />
+
+    <section class="form-button-layout">
+      <div class="checkbox">
+        <input (change)="changeStatus()" type="checkbox" /><label
+          >Remember Me</label
+        >
+      </div>
+
+      <input
+        type="submit"
+        class="form-button"
+        (click)="userExists()"
+        value="Submit"
+      />
+      <br />
+      <div class="forgot-area">
+        <small
+          ><a class="forgotpassword" href="forgotPassword"
+            >Forgot Password?</a
+          ></small
+        >
+      </div>
+      <br />
+      <small>Dont have an account?<a href="register"> SignUp</a></small>
+    </section>
+  </form>
+  <div class="popup" *ngIf="toggleStatus == true">
+    <app-modal [toggleStatus]="Toggle" [error]="message"></app-modal>
+  </div>
+</div>

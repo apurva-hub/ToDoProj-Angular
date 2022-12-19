@@ -1,0 +1,36 @@
+<div class="form">
+  <form class="form-page">
+    <h4 class="form-title">SignUp</h4>
+    <input
+      class="form-input"
+      [(ngModel)]="Name"
+      name="Name"
+      type="text"
+      placeholder="Name"
+    />
+    <input
+      class="form-input"
+      [(ngModel)]="Email"
+      name="Email"
+      type="email"
+      placeholder="Email"
+    />
+    <section class="form-button-layout">
+      <input
+        class="form-input"
+        [(ngModel)]="Password"
+        name="Password"
+        type="password"
+        placeholder="Password"
+      />
+      <input
+        type="submit"
+        class="form-button"
+        value="Submit"
+        (click)="createUser()"
+      />
+      <br />
+      <small>Dont have an account?<a href=""> Login</a></small>
+    </section>
+  </form>
+</div>

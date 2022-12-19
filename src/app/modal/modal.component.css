@@ -1,0 +1,57 @@
+.Modal {
+  display: flex;
+  justify-content: center;
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.Modal-content {
+  border: 2px black solid;
+  height: 20vh;
+  width: 30vw;
+  background-color: #c7d3d4ff;
+  margin-top: 11rem;
+}
+
+.Modal-button {
+  border: none;
+  background-color: #c7d3d4ff;
+}
+
+.button-img {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 10px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.Modal-text {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: "Handlee", cursive;
+}
+
+.goButton {
+  background-color: #c7d3d4ff;
+  border: none;
+  cursor: pointer;
+  margin-left: 29rem;
+}
+
+.go {
+  background-color: #c7d3d4ff;
+  cursor: pointer;
+  height: 2rem;
+  margin-top: 1rem;
+}

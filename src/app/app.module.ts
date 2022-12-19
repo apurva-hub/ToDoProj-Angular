@@ -8,11 +8,26 @@ import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ToDoDataService } from './to-do-data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
+import { RegisterComponent } from './register/register.component';
+import { ModalComponent } from './modal/modal.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ButtonComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [ToDoDataService],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ButtonComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    ModalComponent,
+    ForgotpasswordComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [ToDoDataService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

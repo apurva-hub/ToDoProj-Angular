@@ -1,6 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Arapey&family=Handlee&display=swap");
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.textArea1 {
+  font-size: medium;
+  display: flex;
+  align-content: center;
+  margin-left: 46rem;
+  width: 22rem;
+  font-family: "Handlee", cursive;
+  height: 2.3rem;
+  font-weight: bold;
+}
+
+.textArea2 {
+  font-size: medium;
+  display: flex;
+  align-content: center;
+  margin-left: 46rem;
+  width: 22rem;
+  font-family: "Handlee", cursive;
+  height: 5rem;
+  font-weight: bold;
+}
+
+.submit {
+  margin-left: 54rem;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  width: 6rem;
+  height: 2.4rem;
+  font-family: "Handlee", cursive;
+  border-radius: 1.3rem;
+  font-weight: bold;
+}
+
+.title {
+  margin-left: 10rem;
+  margin-top: 2rem;
+  font-family: "Handlee", cursive;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.hr {
+  background-color: black;
+  width: 90rem;
+  margin-top: 3rem;
+}
+
+.sub-title {
+  writing-mode: vertical-rl;
+  margin-left: 4rem;
+  margin-top: 1rem;
+
+  font-size: 2.5rem;
+}
+
+.task-area {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.arrow-layout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout {
+  border: none;
+  background-color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.logout-button {
+  background-color: white;
+  border: none;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 1rem;
 }

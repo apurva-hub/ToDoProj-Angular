@@ -1,6 +1,8 @@
 <header>
-  <h1>{{ title }}</h1>
-  <app-button text="Add +"></app-button>
+  <h1 class="title">{{ title }}</h1>
+  <button class="logout-button" (click)="logout()">
+    <img class="logout" src="https://www.svgrepo.com/show/55650/logout.svg" />
+  </button>
 </header>
 
 <div class="form-page">
@@ -8,15 +10,28 @@
     <input
       [(ngModel)]="taskName"
       type="text"
+      class="textArea1"
       name="taskName"
       placeholder="Task Name"
     /><br /><br />
     <input
       [(ngModel)]="taskDescription"
       type="text"
+      class="textArea2"
       name="taskDescription"
       placeholder="Task Description"
     /><br /><br />
-    <input type="submit" value="Add Task" /><br /><br />
+    <input class="submit" type="submit" value="submit" /><br /><br />
   </form>
+</div>
+<hr class="hr" />
+<div class="task-area">
+  <h1 class="sub-title">Tasks</h1>
+  <app-home [count]="count"></app-home>
+</div>
+
+<div class="arrow-layout">
+  <button class="arrow" routerLink="/displayProject">
+    <img src="https://www.svgrepo.com/show/87846/right-arrow.svg" />
+  </button>
 </div>
